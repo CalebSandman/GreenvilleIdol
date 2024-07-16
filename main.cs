@@ -33,9 +33,9 @@ class Program {
       int? previousYear = IsInputNumber.GetInt(Console.ReadLine());
 
       //loop until a valid number is entered for the previous year
-      while(previousYear == null)
+      while(previousYear == null || previousYear < 0 || previousYear > 30)
       {
-        Console.Write("Please enter a valid number: ");
+        Console.Write("Please enter a number 0-30: ");
         previousYear = IsInputNumber.GetInt(Console.ReadLine());
       }
 
@@ -43,9 +43,9 @@ class Program {
       int? currentYear = IsInputNumber.GetInt(Console.ReadLine());
 
       //loop until a valid number is entered for the current year
-      while(currentYear == null)
+      while(currentYear == null || currentYear < 0 || currentYear > 30)
       {
-        Console.Write("Please enter a valid number: ");
+        Console.Write("Please enter a valid number 0-30: ");
         currentYear = IsInputNumber.GetInt(Console.ReadLine());
       }
 
